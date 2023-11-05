@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hide recaptcha */
+
+.grecaptcha-badge { visibility: hidden; }
+
+/*
+hamburger menu
+*/
+
+.hamburger-menu {
+    transition-duration: 0.5s;
+}
+.hamburger-menu .icon {
+    transition-duration: 0.5s;
+    position: relative;
+    background-color: #fff;
+}
+.hamburger-menu .icon:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    top: -15px;
+}
+.hamburger-menu .icon:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    background-color: #fff;
+    content: "";
+    top: 15px;
+}
+.hamburger-menu.open .icon {
+    transition-duration: 0.2s;
+    background: transparent;
+}
+.hamburger-menu.open .icon:before {
+    transform: rotateZ(135deg) scaleX(1.25) translate(9px, -11px);
+}
+.hamburger-menu.open .icon:after {
+    transform: rotateZ(-135deg) scaleX(1.25) translate(8px, 10px);
+}
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* flicker animation keyframes */
+@-webkit-keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 1;
+    }
+    5.5% {
+      opacity: 0;
+    }
+    6% {
+      opacity: 1;
+    }
+    6.5% {
+      opacity: 1;
+    }
+    7% {
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    5% {
+      opacity: 1;
+    }
+    5.5% {
+      opacity: 0;
+    }
+    6% {
+      opacity: 1;
+    }
+    6.5% {
+      opacity: 1;
+    }
+    7% {
+      opacity: 0;
+    }
+    8% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .flicker {
+    -webkit-animation: flicker 2s ease-in-out infinite alternate;
+    animation: flicker 2s ease-in-out infinite alternate;
+  }
+
+/* end flicker animation keyframes */
+
+/* disable tap highlight color on mobile */
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.no-transition,
+.no-transition *,
+.no-transition *:before,
+.no-transition *:after {
+    transition: none !important;
+}
+
+/*
+end hamburger menu
+*/
+
+/* @font-face {
+    font-family: 'Anton';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/Anton-Regular.ttf) format('woff2');
+} */
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');*/
